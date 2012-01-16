@@ -1,0 +1,43 @@
+[ What ]
+
+this is a small script to benchmark some provers for
+geometric logic on a set of formulas created by M. Bezem
+and J. Fisher.
+
+
+
+[ Requirements ]
+
+to run the script 'bench.pl' you need:
+
+* Perl          [http://www.perl.org]
+* clp           [http://code.google.com/p/clp]
+* Java          [http://www.java.com]
+* SWI Prolog    [http://www.swi-prolog.org]
+
+Perl needs these modules in order to work:
+
+ Switch;
+ Proc::Reliable;
+ Getopt::Long;
+ Term::ANSIColor;
+ Time::HiRes;
+
+
+this module is not typically installed:
+
+    Proc::Reliable
+
+to install it module through cpan:
+
+    cpan> install Proc::Reliable
+
+or on debian based systems:
+
+   sudo apt-get install libproc-reliable-perl
+
+
+
+[ TODO ]
+
+write results to other formats..
