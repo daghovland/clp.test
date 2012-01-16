@@ -14,6 +14,8 @@ to run the script 'bench.pl' you need:
 * clp           [http://code.google.com/p/clp]
 * Java          [http://www.java.com]
 * SWI Prolog    [http://www.swi-prolog.org]
+* Vampire       [http://www.vprover.org]
+* E             [http://www4.informatik.tu-muenchen.de/~schulz/E/E.html]
 
 Perl needs these modules in order to work:
 

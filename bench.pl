@@ -152,7 +152,7 @@ sub runVampire {
     my $argv = "vampire --proof tptp --mode casc ";
 
     for (@tptpFiles) {
-        my ($status, $used) = runCmd("$argv $_");
+        my ($status, $used) = runCmd("cat $_ | $argv ");
         if( ! $opts{'dry'} ) {
             fmtResult($prover, $status, $used, $_);
             $results{'vampire'}{nameFromPath($_)} = [$status,$used];
@@ -253,6 +253,8 @@ sub runCmd {
 }
 
 sub runAll {
+    runVampire();
+    runEprover();
     runClpGl();
     runClp();
     runColog();
@@ -276,7 +278,7 @@ sub nameFromPath {
 
     my $pathName = shift;
 
-    if( $pathName =~ m/^.+\/([^\/]+)\.(in|gl)$/) {
+    if( $pathName =~ m/^.+\/([^\/]+)\.(in|gl|p)$/) {
         return $1;
     }
 
