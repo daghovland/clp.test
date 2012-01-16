@@ -24,7 +24,7 @@ my %opts = ('help' => 0,
             'dry'   => 0);
 
 # results of all tests
-my %results = ('clp -C' => {}, 'clp -G' => {}, 'CL.pl' => {}, 'colog' => {});
+my %results = ('clp -C' => {}, 'clp -G' => {}, 'CL.pl' => {}, 'colog' => {}, 'vampire' => {}, 'eprover' => {});
 
 # use ANSI colors on these if --ansi
 my $OK = 'ok';
@@ -33,6 +33,7 @@ my $NO = 'no';
 # the different formats (same formulas though)
 my @bezFiles = glob('formats/Bezem/*.in');
 my @fishFiles = glob('formats/Fisher/*.gl');
+my @tptpFiles = glob('formats/TPTP/*.p');
 
 # run subprocesses with Proc:Reliable
 my $process = Proc::Reliable->new();
@@ -140,6 +141,37 @@ sub runClp {
         if( ! $opts{'dry'} ) {
             fmtResult($prover, $status, $used, $_);
             $results{'clp -C'}{nameFromPath($_)} = [$status,$used];
+        }
+    }
+
+}
+
+sub runVampire {
+
+    my $prover = "vampire";
+    my $argv = "vampire --proof tptp --mode casc ";
+
+    for (@tptpFiles) {
+        my ($status, $used) = runCmd("$argv $_");
+        if( ! $opts{'dry'} ) {
+            fmtResult($prover, $status, $used, $_);
+            $results{'vampire'}{nameFromPath($_)} = [$status,$used];
+        }
+    }
+
+}
+
+
+sub runEprover {
+
+    my $prover = "eprover";
+    my $argv = "eprover -s --print-statistics -xAuto -tAuto --memory-limit=Auto --tstp-format --answers";
+
+    for (@tptpFiles) {
+        my ($status, $used) = runCmd("$argv $_");
+        if( ! $opts{'dry'} ) {
+            fmtResult($prover, $status, $used, $_);
+            $results{'eprover'}{nameFromPath($_)} = [$status,$used];
         }
     }
 
