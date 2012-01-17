@@ -1,0 +1,4 @@
+syntax:glob
+CL/CL.pl
+Colog/colog.jar
+CL/tmp

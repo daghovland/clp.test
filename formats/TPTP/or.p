@@ -1,4 +1,3 @@
-fof(initial_model, axiom, ). 
 fof(assump,axiom, ( $true  => ((p)|(q)) )).
 fof(goal_pr,axiom, ((p & r) =>  goal )).
 fof(goal_q,axiom, ((q) =>  goal )).
