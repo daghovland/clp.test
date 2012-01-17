@@ -316,7 +316,7 @@ sub outPlain {
     }
 
     switch ( $opts{'only'} ) {
-        case "all"   { @provers = ('CL.pl', 'clp -C', 'clp -G', 'colog', 'vampire', 'eprover', 'leancop'); }
+        case "all"   { @provers = ('CL.pl', 'clp -C', 'colog', 'vampire', 'eprover', 'leancop'); }
         case "clp"   { @provers = ('clp -C'); }
         case "CL.pl" { @provers = ('CL.pl'); }
         case "colog" { @provers = ('colog'); }

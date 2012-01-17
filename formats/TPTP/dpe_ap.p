@@ -1,4 +1,9 @@
-fof(initial_model, axiom, (dom(a))  &  (dom(b))  &  (dom(c))  &  ('F.GOAL' & 'T.REFLEXIVE_REWRITE'(a,b) & 'T.REFLEXIVE_REWRITE'(a,c) & 'T.all.2' & 'T.all.3' & 'T.all.5' & 'T.all.7' & 'T.all.9' & 'T.all.11' & 'T.all.13' & 'T.all.17')). 
+fof(initial_model, axiom, dom(a)).
+fof(initial_model, axiom, dom(b)).
+fof(initial_model, axiom, dom(c)).
+fof(initial_model, axiom, 'F.GOAL').
+fof(initial_model, axiom, 'T.REFLEXIVE_REWRITE'(a,b) & 'T.REFLEXIVE_REWRITE'(a,c)).
+fof(initial_model, axiom, 'T.all.2' & 'T.all.3' & 'T.all.5' & 'T.all.7' & 'T.all.9' & 'T.all.11' & 'T.all.13' & 'T.all.17'). 
 fof(tnd1,axiom, ![ A, B] : (('T.REWRITE'(A,B) & 'F.REWRITE'(A,B)) =>  goal )).
 fof(tnd2,axiom, ![ A, B] : (('T.REFLEXIVE_REWRITE'(A,B) & 'F.REFLEXIVE_REWRITE'(A,B)) =>  goal )).
 fof(tnd3,axiom, ![ A, B] : (('T.EQUALISH'(A,B) & 'F.EQUALISH'(A,B)) =>  goal )).

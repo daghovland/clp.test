@@ -6,3 +6,4 @@ leancop/*.pl
 leancop/*.sh
 leancop/ReadMe_leancop
 leancop/TMP*
+res*.txt
