@@ -18,10 +18,10 @@ fof(conp,axiom, ![ P, Q, L] : ((e(P,Q) & i(Q,L)) => (i(P,L)) )).
 fof(conl,axiom, ![ P, L, M] : ((i(P,L) & e(L,M)) => (i(P,M)) )).
 fof(sortp,axiom, ![ P, L] : ((i(P,L)) => (p(P)) )).
 fof(sortl,axiom, ![ P, L] : ((i(P,L)) => (l(L)) )).
-fof(gap1,axiom, ( $true  => ((i(a1,b2b3))|(i(b3,a1a2))) )).
-fof(gap2,axiom, ( $true  => ((i(a2,b3b1))|(i(b1,a2a3))) )).
-fof(gap3,axiom, ( $true  => ((i(a3,b1b2))|(i(b2,a3a1))) )).
-fof(unique,axiom, ![ P, L, M, Q] : ((i(P,L) & i(P,M) & i(Q,L) & i(Q,M)) => ((e(P,Q))|(e(L,M))) )).
+fof(gap1,axiom,  $true  => i(a1,b2b3)|i(b3,a1a2)).
+fof(gap2,axiom,  $true  => i(a2,b3b1)|i(b1,a2a3) ).
+fof(gap3,axiom,  $true  => i(a3,b1b2)|i(b2,a3a1) ).
+fof(unique,axiom, ![ P, L, M, Q] : i(P,L) & i(P,M) & i(Q,L) & i(Q,M) => (e(P,Q)|e(L,M)) ).
 fof(meet,axiom, ![ L, M] : ((l(L) & l(M)) =>  ? [P ]:  ((dom(P) & i(P,L) & i(P,M))) )).
 fof(join,axiom, ![ P, Q] : ((p(P) & p(Q)) =>  ? [L ]:  ((dom(L) & i(P,L) & i(Q,L))) )).
 fof(goal_to_be_proved,conjecture,( goal )).

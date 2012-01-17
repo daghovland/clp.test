@@ -19,6 +19,7 @@ to run the script 'bench.pl' you need:
 * Colog         [http://johnrfisher.net/colog/] (put colog.jar in the folder "Colog")
 * CL.pl         [http://www.cs.vu.nl/~diem/research/ht/index.html] (put CL.pl in the folder "CL")
 * leanCop       [http://leancop.de] (Extract the archive into the folder leancop)
+* Geo           [http://www.ii.uni.wroc.pl/~nivelle/software/geo/] (The executable "geo" must be on the path)	
 
 Perl needs these modules in order to work:
 

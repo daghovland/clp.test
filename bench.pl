@@ -24,7 +24,7 @@ my %opts = ('help' => 0,
             'dry'   => 0);
 
 # results of all tests
-my %results = ('clp -C' => {}, 'clp -G' => {}, 'CL.pl' => {}, 'colog' => {}, 'vampire' => {}, 'eprover' => {}, 'leancop' => {});
+my %results = ('clp -C' => {}, 'clp -G' => {}, 'CL.pl' => {}, 'colog' => {}, 'vampire' => {}, 'eprover' => {}, 'leancop' => {}, 'Geo' => {});
 
 # use ANSI colors on these if --ansi
 my $OK = 'ok';
@@ -161,6 +161,21 @@ sub runVampire {
 
 }
 
+sub runGeo {
+
+    my $prover = "Geo";
+    my $argv = "geo -nonempty -tptp_input -inputfile ";
+
+    for (@tptpFiles) {
+        my ($status, $used) = runCmd("$argv $_");
+        if( ! $opts{'dry'} ) {
+            fmtResult($prover, $status, $used, $_);
+            $results{'Geo'}{nameFromPath($_)} = [$status,$used];
+        }
+    }
+
+}
+
 sub runLeancop {
 
     my $prover = "leancop";
@@ -269,6 +284,7 @@ sub runCmd {
 }
 
 sub runAll {
+    runGeo();
     runLeancop();
     runVampire();
     runEprover();
@@ -316,7 +332,7 @@ sub outPlain {
     }
 
     switch ( $opts{'only'} ) {
-        case "all"   { @provers = ('CL.pl', 'clp -C', 'colog', 'vampire', 'eprover', 'leancop'); }
+        case "all"   { @provers = ('CL.pl', 'clp -C', 'colog', 'vampire', 'eprover', 'leancop', 'Geo'); }
         case "clp"   { @provers = ('clp -C'); }
         case "CL.pl" { @provers = ('CL.pl'); }
         case "colog" { @provers = ('colog'); }
@@ -382,7 +398,7 @@ sub outMD {
     }
 
     switch ( $opts{'only'} ) {
-        case "all"   { @provers = ('CL.pl', 'clp -C', 'clp -G', 'colog', 'vampire', 'eprover', 'leancop'); }
+        case "all"   { @provers = ('CL.pl', 'clp -C', 'clp -G', 'colog', 'vampire', 'eprover', 'leancop', 'Geo'); }
         case "clp"   { @provers = ('clp -C'); }
         case "CL.pl" { @provers = ('CL.pl'); }
         case "colog" { @provers = ('colog'); }
@@ -435,7 +451,7 @@ sub outHTML {
     }
 
     switch ( $opts{'only'} ) {
-        case "all"   { @provers = ('CL.pl', 'clp -C', 'clp -G', 'colog', 'vampire', 'eprover', 'leancop'); }
+        case "all"   { @provers = ('CL.pl', 'clp -C', 'clp -G', 'colog', 'vampire', 'eprover', 'leancop', 'Geo'); }
         case "clp"   { @provers = ('clp -C'); }
         case "CL.pl" { @provers = ('CL.pl'); }
         case "colog" { @provers = ('colog'); }
