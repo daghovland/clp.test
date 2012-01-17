@@ -24,7 +24,7 @@ my %opts = ('help' => 0,
             'dry'   => 0);
 
 # results of all tests
-my %results = ('clp -C' => {}, 'clp -G' => {}, 'CL.pl' => {}, 'colog' => {}, 'vampire' => {}, 'eprover' => {});
+my %results = ('clp -C' => {}, 'clp -G' => {}, 'CL.pl' => {}, 'colog' => {}, 'vampire' => {}, 'eprover' => {}, 'leancop' => {});
 
 # use ANSI colors on these if --ansi
 my $OK = 'ok';
@@ -161,6 +161,22 @@ sub runVampire {
 
 }
 
+sub runLeancop {
+
+    my $prover = "leancop";
+    my $argv = "./leancop.sh ";
+
+    chdir("leancop");
+    for (@tptpFiles) {
+        my ($status, $used) = runCmd("$argv ../$_");
+        if( ! $opts{'dry'} ) {
+            fmtResult($prover, $status, $used, $_);
+            $results{'leancop'}{nameFromPath($_)} = [$status,$used];
+        }
+    }
+    chdir("..");
+}
+
 
 sub runEprover {
 
@@ -253,6 +269,7 @@ sub runCmd {
 }
 
 sub runAll {
+    runLeancop();
     runVampire();
     runEprover();
     runClpGl();
@@ -299,7 +316,7 @@ sub outPlain {
     }
 
     switch ( $opts{'only'} ) {
-        case "all"   { @provers = ('CL.pl', 'clp -C', 'clp -G', 'colog'); }
+        case "all"   { @provers = ('CL.pl', 'clp -C', 'clp -G', 'colog', 'vampire', 'eprover', 'leancop'); }
         case "clp"   { @provers = ('clp -C'); }
         case "CL.pl" { @provers = ('CL.pl'); }
         case "colog" { @provers = ('colog'); }
@@ -365,7 +382,7 @@ sub outMD {
     }
 
     switch ( $opts{'only'} ) {
-        case "all"   { @provers = ('CL.pl', 'clp -C', 'clp -G', 'colog'); }
+        case "all"   { @provers = ('CL.pl', 'clp -C', 'clp -G', 'colog', 'vampire', 'eprover', 'leancop'); }
         case "clp"   { @provers = ('clp -C'); }
         case "CL.pl" { @provers = ('CL.pl'); }
         case "colog" { @provers = ('colog'); }
@@ -418,7 +435,7 @@ sub outHTML {
     }
 
     switch ( $opts{'only'} ) {
-        case "all"   { @provers = ('CL.pl', 'clp -C', 'clp -G', 'colog'); }
+        case "all"   { @provers = ('CL.pl', 'clp -C', 'clp -G', 'colog', 'vampire', 'eprover', 'leancop'); }
         case "clp"   { @provers = ('clp -C'); }
         case "CL.pl" { @provers = ('CL.pl'); }
         case "colog" { @provers = ('colog'); }

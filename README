@@ -18,6 +18,7 @@ to run the script 'bench.pl' you need:
 * E             [http://www4.informatik.tu-muenchen.de/~schulz/E/E.html] (the runtime eprover must be on the path)
 * Colog         [http://johnrfisher.net/colog/] (put colog.jar in the folder "Colog")
 * CL.pl         [http://www.cs.vu.nl/~diem/research/ht/index.html] (put CL.pl in the folder "CL")
+* leanCop       [http://leancop.de] (Extract the archive into the folder leancop)
 
 Perl needs these modules in order to work:
 
