@@ -47,7 +47,7 @@ my $helpmessage='
 
    -h --help  : print this menu and exit
    -f --file  : results -> file (default:stdout)
-   -o --only  : legal values: CL.pl,clp,colog
+   -o --only  : legal values: CL.pl,clp,colog,Geo
    -t --time  : timeout in seconds (default:3)
    -a --ansi  : turn on ANSI colored output
    -q --quiet : do not report anything during run
@@ -84,13 +84,13 @@ sub parseArgv {
 sub sanity {
 
     # are the required executables in place?
-    my @executables = ('java', 'swipl', 'clp');
+    my @executables = ('java', 'swipl', 'clp', 'geo', 'eprover');
     for (@executables) {
        usage("[ERROR] missing executable: '$_'") unless which($_);
     }
 
     # are we getting funky arguments
-    my @legal = ('clp', 'CL.pl', 'colog', 'all');
+    my @legal = ('clp', 'CL.pl', 'colog', 'all', 'Geo');
     unless ( grep( { $_ eq $opts{'only'} } @legal ) ){
         usage("[ERROR] legal values for --only: CL.pl, clp, colog")
     }
@@ -137,7 +137,7 @@ sub runClp {
     my $argv = "clp -m 0 -CM";
 
     for (@bezFiles) {
-        my ($status, $used) = runCmd("$argv $_");
+        my ($status, $used) = runCmd("$argv -w $opts{'time'} $_");
         if( ! $opts{'dry'} ) {
             fmtResult($prover, $status, $used, $_);
             $results{'clp -C'}{nameFromPath($_)} = [$status,$used];
@@ -149,7 +149,7 @@ sub runClp {
 sub runVampire {
 
     my $prover = "vampire";
-    my $argv = "vampire --proof tptp --mode casc ";
+    my $argv = "vampire --proof tptp --mode casc -t $opts{'time'} ";
 
     for (@tptpFiles) {
         my ($status, $used) = runCmd("cat $_ | $argv ");
@@ -196,7 +196,7 @@ sub runLeancop {
 sub runEprover {
 
     my $prover = "eprover";
-    my $argv = "eprover -s --print-statistics -xAuto -tAuto --memory-limit=Auto --tstp-format --answers";
+    my $argv = "eprover -s --print-statistics -xAuto -tAuto --cpu-limit=$opts{'time'} --memory-limit=Auto --tptp3-format --answers";
 
     for (@tptpFiles) {
         my ($status, $used) = runCmd("$argv $_");
@@ -336,6 +336,7 @@ sub outPlain {
         case "clp"   { @provers = ('clp -C'); }
         case "CL.pl" { @provers = ('CL.pl'); }
         case "colog" { @provers = ('colog'); }
+        case "Geo" { @provers = ('Geo'); }
     }
 
     if($opts{'file'}) {
@@ -402,6 +403,7 @@ sub outMD {
         case "clp"   { @provers = ('clp -C'); }
         case "CL.pl" { @provers = ('CL.pl'); }
         case "colog" { @provers = ('colog'); }
+        case "Geo" { @provers = ('Geo'); }
     }
 
     if($opts{'file'}) {
@@ -455,6 +457,7 @@ sub outHTML {
         case "clp"   { @provers = ('clp -C'); }
         case "CL.pl" { @provers = ('CL.pl'); }
         case "colog" { @provers = ('colog'); }
+        case "Geo" { @provers = ('Geo'); }
     }
 
     if($opts{'file'}) {
@@ -514,6 +517,7 @@ sub outTex {
         case "clp -G" { runClpGl(); }
         case "CL.pl" { runCLpl(); }
         case "colog" { runColog(); }
+        case "Geo" { runGeo(); }
     }
 
     # don't write results in dryrun :-)
