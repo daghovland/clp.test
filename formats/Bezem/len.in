@@ -43,5 +43,3 @@ _ axiom lo_len3(M,N,Y,Z) :(aux2(M,N,Y,Z) => dom(U),l_e(M,M),l_e(M,N),rn(N,Y,U),r
  
 
 % allows axiom 0 to be applied only once
-enabled(0,[]).
-next(0,[],1).

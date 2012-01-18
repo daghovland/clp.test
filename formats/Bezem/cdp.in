@@ -22,13 +22,3 @@ _ axiom trans_rt(X,Y,Z) :(rt(X,Y),rt(Y,Z) => rt(X,Z)).
 4 axiom dp_r(X,Y,Z) :(r(X,Y),r(X,Z) => dom(U),r(Y,U),r(Z,U)).
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-enabled(X,X).
-enabled(N,[]):-number(N).
-
-next(_,[],1).
-next(_,1,2).
-next(_,2,3).
-next(_,3,4).
-next(_,4,5).
-next(_,5,1).
-

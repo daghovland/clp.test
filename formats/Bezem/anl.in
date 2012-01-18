@@ -23,12 +23,3 @@ _ axiom trans_ss(X,Y,Z) :(ss(X,Y),ss(Y,Z) => ss(X,Z)).
 5 axiom e_or_sss(X,Y) :(ss(X,Y) => e(X,Y);dom(Z),s(X,Z),ss(Z,Y)). 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-enabled(X,X).
-enabled(N,[]):-number(N).
-
-next(_,[],1).
-next(_,1,2).
-next(_,2,3).
-next(_,3,4).
-next(_,4,5).
-next(_,5,1).

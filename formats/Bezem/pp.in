@@ -75,14 +75,6 @@ col(C,D,I,R),col(A,F,I,S)                             %cross CD,AF in I
 %projective incidence axiom
 d axiom point(L,M) : (el(L,L),el(M,M) => dom(P),pl(P,L),pl(P,M)).
 
-enabled(X,X).
-enabled(N,[]):-number(N).
-
-next(_,[],1).
-next(_,1,2).
-next(_,2,3).
-next(_,3,4).
-next(_,4,1).
 
 
 

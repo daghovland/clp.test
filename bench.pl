@@ -90,7 +90,7 @@ sub sanity {
     }
 
     # are we getting funky arguments
-    my @legal = ('clp', 'CL.pl', 'colog', 'all', 'Geo');
+    my @legal = ('clp', 'CL.pl', 'colog', 'all', 'Geo', 'vampire', 'eprover', 'leanCop');
     unless ( grep( { $_ eq $opts{'only'} } @legal ) ){
         usage("[ERROR] legal values for --only: CL.pl, clp, colog")
     }
@@ -285,13 +285,13 @@ sub runCmd {
 
 sub runAll {
     runGeo();
-    runLeancop();
     runVampire();
     runEprover();
     runClpGl();
     runClp();
-    runColog();
     runCLpl();
+    runLeancop();
+    runColog();
 }
 
 
@@ -332,7 +332,7 @@ sub outPlain {
     }
 
     switch ( $opts{'only'} ) {
-        case "all"   { @provers = ('CL.pl', 'clp -C', 'colog', 'vampire', 'eprover', 'leancop', 'Geo'); }
+        case "all"   { @provers = ('CL.pl', 'clp -C', 'vampire', 'eprover', 'leancop', 'Geo', 'colog'); }
         case "clp"   { @provers = ('clp -C'); }
         case "CL.pl" { @provers = ('CL.pl'); }
         case "colog" { @provers = ('colog'); }
@@ -399,11 +399,13 @@ sub outMD {
     }
 
     switch ( $opts{'only'} ) {
-        case "all"   { @provers = ('CL.pl', 'clp -C', 'clp -G', 'colog', 'vampire', 'eprover', 'leancop', 'Geo'); }
+        case "all"   { @provers = ('CL.pl', 'clp -C', 'clp -G', 'vampire', 'eprover', 'leancop', 'Geo', 'colog'); }
         case "clp"   { @provers = ('clp -C'); }
         case "CL.pl" { @provers = ('CL.pl'); }
         case "colog" { @provers = ('colog'); }
         case "Geo" { @provers = ('Geo'); }
+        case "vampire" { @provers = ('vampire'); }
+        case "leanCop" { @provers = ('leanCop'); }
     }
 
     if($opts{'file'}) {
@@ -453,11 +455,13 @@ sub outHTML {
     }
 
     switch ( $opts{'only'} ) {
-        case "all"   { @provers = ('CL.pl', 'clp -C', 'clp -G', 'colog', 'vampire', 'eprover', 'leancop', 'Geo'); }
+        case "all"   { @provers = ('CL.pl', 'clp -C', 'clp -G', 'vampire', 'eprover', 'leancop', 'Geo', 'colog'); }
         case "clp"   { @provers = ('clp -C'); }
         case "CL.pl" { @provers = ('CL.pl'); }
         case "colog" { @provers = ('colog'); }
         case "Geo" { @provers = ('Geo'); }
+        case "vampire" { @provers = ('vampire'); }
+        case "leanCop" { @provers = ('leanCop'); }
     }
 
     if($opts{'file'}) {
@@ -518,6 +522,8 @@ sub outTex {
         case "CL.pl" { runCLpl(); }
         case "colog" { runColog(); }
         case "Geo" { runGeo(); }
+	case "leanCop" { runLeancop(); }
+	case "vampire" { runVampire(); }
     }
 
     # don't write results in dryrun :-)
