@@ -24,7 +24,7 @@ my %opts = ('help' => 0,
             'dry'   => 0);
 
 # results of all tests
-my %results = ('clp -C' => {}, 'clp -G' => {}, 'CL.pl' => {}, 'colog' => {}, 'vampire' => {}, 'eprover' => {}, 'leancop' => {}, 'Geo' => {});
+my %results = ('clp' => {}, 'clp -G' => {}, 'CL.pl' => {}, 'colog' => {}, 'vampire' => {}, 'eprover' => {}, 'leancop' => {}, 'Geo' => {});
 
 # use ANSI colors on these if --ansi
 my $OK = 'ok';
@@ -90,7 +90,7 @@ sub sanity {
     }
 
     # are we getting funky arguments
-    my @legal = ('clp', 'CL.pl', 'colog', 'all', 'Geo', 'vampire', 'eprover', 'leanCop');
+    my @legal = ('clp', 'clp -G', 'CL.pl', 'colog', 'all', 'Geo', 'vampire', 'eprover', 'leanCop');
     unless ( grep( { $_ eq $opts{'only'} } @legal ) ){
         usage("[ERROR] legal values for --only: CL.pl, clp, colog")
     }
@@ -133,14 +133,14 @@ sub which {
 
 sub runClp {
 
-    my $prover = "clp -C";
+    my $prover = "clp";
     my $argv = "clp -m 0 -CM";
 
     for (@bezFiles) {
         my ($status, $used) = runCmd("$argv -w $opts{'time'} $_");
         if( ! $opts{'dry'} ) {
             fmtResult($prover, $status, $used, $_);
-            $results{'clp -C'}{nameFromPath($_)} = [$status,$used];
+            $results{'clp'}{nameFromPath($_)} = [$status,$used];
         }
     }
 
@@ -332,8 +332,8 @@ sub outPlain {
     }
 
     switch ( $opts{'only'} ) {
-        case "all"   { @provers = ('CL.pl', 'clp -C', 'vampire', 'eprover', 'leancop', 'Geo', 'colog'); }
-        case "clp"   { @provers = ('clp -C'); }
+        case "all"   { @provers = ('CL.pl', 'clp', 'vampire', 'eprover', 'leancop', 'Geo', 'colog'); }
+        case "clp"   { @provers = ('clp'); }
         case "CL.pl" { @provers = ('CL.pl'); }
         case "colog" { @provers = ('colog'); }
         case "Geo" { @provers = ('Geo'); }
@@ -399,8 +399,8 @@ sub outMD {
     }
 
     switch ( $opts{'only'} ) {
-        case "all"   { @provers = ('CL.pl', 'clp -C', 'clp -G', 'vampire', 'eprover', 'leancop', 'Geo', 'colog'); }
-        case "clp"   { @provers = ('clp -C'); }
+        case "all"   { @provers = ('CL.pl', 'clp', 'clp -G', 'vampire', 'eprover', 'leancop', 'Geo', 'colog'); }
+        case "clp"   { @provers = ('clp'); }
         case "CL.pl" { @provers = ('CL.pl'); }
         case "colog" { @provers = ('colog'); }
         case "Geo" { @provers = ('Geo'); }
@@ -455,8 +455,8 @@ sub outHTML {
     }
 
     switch ( $opts{'only'} ) {
-        case "all"   { @provers = ('CL.pl', 'clp -C', 'clp -G', 'vampire', 'eprover', 'leancop', 'Geo', 'colog'); }
-        case "clp"   { @provers = ('clp -C'); }
+        case "all"   { @provers = ('CL.pl', 'clp', 'clp -G', 'vampire', 'eprover', 'leancop', 'Geo', 'colog'); }
+        case "clp"   { @provers = ('clp'); }
         case "CL.pl" { @provers = ('CL.pl'); }
         case "colog" { @provers = ('colog'); }
         case "Geo" { @provers = ('Geo'); }
@@ -517,7 +517,7 @@ sub outTex {
 
     switch ( $opts{'only'} ) {
         case "all" { runAll(); }
-        case "clp -C" { runClp(); }
+        case "clp" { runClp(); }
         case "clp -G" { runClpGl(); }
         case "CL.pl" { runCLpl(); }
         case "colog" { runColog(); }

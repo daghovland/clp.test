@@ -70,10 +70,7 @@ col(C,D,I,R),col(A,F,I,S)                             %cross CD,AF in I
 => dom(T),col(G,H,I,T);                               % G,H,I on line T 
    or6(A,B,C,M,D,E,F,L)).               %A,B or C on M or D,E or F on L
 
-%last, to avoid infinite paths, not used in this proof
-
-%projective incidence axiom
-d axiom point(L,M) : (el(L,L),el(M,M) => dom(P),pl(P,L),pl(P,M)).
+_ axiom point(L,M) : (el(L,L),el(M,M) => dom(P),pl(P,L),pl(P,M)).
 
 
 

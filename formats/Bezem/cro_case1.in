@@ -105,11 +105,11 @@ _ axiom sortl(P,L) : (i(P,L) => l(L)).
 _ axiom unique(P,Q,L,M) : (i(P,L),i(P,M),i(Q,L),i(Q,M) => e(P,Q);e(L,M)).
 
 % projective geometry
-join(P,Q,L) axiom join(P,Q) : (p(P),p(Q) => dom(L),i(P,L),i(Q,L)).
-meet(L,M,P) axiom meet(L,M) : (l(L),l(M) => dom(P),i(P,L),i(P,M)).
+_ axiom join(P,Q) : (p(P),p(Q) => dom(L),i(P,L),i(Q,L)).
+_ axiom meet(L,M) : (l(L),l(M) => dom(P),i(P,L),i(P,M)).
 
 % pappus' axiom
-pappus(G,H,I) axiom papp(A,B,C,D,E,F,G,H,I,L,M,N,O,X,Y,S,T) : 
+_ axiom papp(A,B,C,D,E,F,G,H,I,L,M,N,O,X,Y,S,T) : 
 (
   i(A,L),i(B,L),i(C,L),i(D,M),i(E,M),i(F,M), % ABC on L, DEF on M
   i(B,N),i(F,N),i(G,N),i(C,O),i(E,O),i(G,O), % meet BF,CE in G
