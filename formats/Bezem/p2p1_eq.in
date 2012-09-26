@@ -8,8 +8,10 @@ name(p2p1).
 
 %points 
 dom(a). dom(b). dom(c). dom(d). dom(e). dom(f). dom(g). dom(h). dom(i).
+point(a). point(b). point(c). point(d). point(e). point(f). point(g). point(h). point(i).
 %lines 
 dom(l). dom(m). dom(n). dom(o). dom(p). dom(q). dom(r). dom(s).
+is_line(l). is_line(m). is_line(n). is_line(o). is_line(p). is_line(q). is_line(r). is_line(s).
 
 %Pappus1 assumptions, same as in Pappus2
 _ axiom assump1 : (true => col(a,b,c,l),col(d,e,f,m)). %a,b,c on l, etc.
@@ -47,9 +49,9 @@ col(C,D,I,R),col(A,F,I,S)                             %cross CD,AF in I
 _ axiom unique(P,L,M,Q):(pl(P,L),pl(P,M),pl(Q,L),pl(Q,M) => =(P,Q); =(L,M)).
 
 %last to avoid infinite paths: projective incidence axioms
-_ axiom line(P,Q) : (=(P,P),=(Q,Q) => dom(L),pl(P,L),pl(Q,L)).
+_ axiom line(P,Q) : (point(P),point(Q),=(P,P),=(Q,Q) => dom(L),line(L),pl(P,L),pl(Q,L)).
 
 %not used in this proof
-_ axiom point(L,M) : (=(L,L),=(M,M) => dom(P),pl(P,L),pl(P,M)).
+_ axiom point(L,M) : (line(L),line(M),=(L,L),=(M,M) => dom(P),point(P),pl(P,L),pl(P,M)).
 
 

@@ -17,7 +17,7 @@ to run the script 'bench.pl' you need:
 * Vampire       [http://www.vprover.org] (the runtime must be renamed to "vampire" and be on the path)
 * E             [http://www4.informatik.tu-muenchen.de/~schulz/E/E.html] (the runtime eprover must be on the path)
 * Colog         [http://johnrfisher.net/colog/] (put colog.jar in the folder "Colog")
-* CL.pl         [http://www.cs.vu.nl/~diem/research/ht/index.html] (put CL.pl in the folder "CL")
+* CL.pl         [http://www.cs.vu.nl/~diem/research/ht/index.html] (put CL.pl in a subfolder "CL". Remove the line containing "enabled" and "next")
 * leanCop       [http://leancop.de] (Extract the archive into the folder leancop)
 * Geo           [http://www.ii.uni.wroc.pl/~nivelle/software/geo/] (The executable "geo" must be on the path)	
 
