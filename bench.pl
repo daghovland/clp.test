@@ -179,7 +179,7 @@ sub runGeo {
 sub runLeancop {
 
     my $prover = "leancop";
-    my $argv = "./leancop.sh ";
+    my $argv = "./leancop.sh";
 
     chdir("leancop");
     for (@tptpFiles) {

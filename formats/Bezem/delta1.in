@@ -30,5 +30,5 @@ _ axiom ax_ex_1:(t_ex_1 => dom(Y),notp_1(Y)).
 
 _ axiom ax_imp_1(Y):(t_imp_1(Y),t_ex_1 => dom(Y),notp_1(Y)).
 
-_ axiom ax_ex_1:(true => dom(Y),t_imp_1(Y)).
+_ axiom ax_ex_3:(true => dom(Y),t_imp_1(Y)).
 
