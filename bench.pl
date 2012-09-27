@@ -188,6 +188,7 @@ sub runLeancop {
             fmtResult($prover, $status, $used, $_);
             $results{'leancop'}{nameFromPath($_)} = [$status,$used];
         }
+	runCmd("killall swipl");
     }
     chdir("..");
 }
@@ -336,6 +337,9 @@ sub outPlain {
         case "clp"   { @provers = ('clp'); }
         case "CL.pl" { @provers = ('CL.pl'); }
         case "colog" { @provers = ('colog'); }
+        case "eprover" { @provers = ('eprover'); }
+        case "vampire" { @provers = ('vampire'); }
+        case "leancop" { @provers = ('leancop'); }
         case "Geo" { @provers = ('Geo'); }
     }
 
@@ -354,8 +358,7 @@ sub outPlain {
     my $spacerResult = "     ";
 
     printf $FH  "\n%${columnWidth}s", "";
-    for (@provers) {
-        printf $FH "%-${columnWidth}s", $_;
+    for (@provers) {        printf $FH "%-${columnWidth}s", $_;
     }
     print $FH "\n\n";
 
@@ -405,6 +408,7 @@ sub outMD {
         case "colog" { @provers = ('colog'); }
         case "Geo" { @provers = ('Geo'); }
         case "vampire" { @provers = ('vampire'); }
+        case "eprover" { @provers = ('eprover'); }
         case "leanCop" { @provers = ('leanCop'); }
     }
 
@@ -461,6 +465,7 @@ sub outHTML {
         case "colog" { @provers = ('colog'); }
         case "Geo" { @provers = ('Geo'); }
         case "vampire" { @provers = ('vampire'); }
+        case "eprover" { @provers = ('eprover'); }
         case "leanCop" { @provers = ('leanCop'); }
     }
 
@@ -524,6 +529,7 @@ sub outTex {
         case "Geo" { runGeo(); }
 	case "leanCop" { runLeancop(); }
 	case "vampire" { runVampire(); }
+	case "eprover" { runEprover(); }
     }
 
     # don't write results in dryrun :-)
