@@ -468,207 +468,71 @@ leancop  -  no  -  wclock: 60.508s  -  tdpe3.in
 leancop  -  no  -  wclock: 60.508s  -  tdpe4.in
 leancop  -  ok  -  wclock: 1.028s  -  test.in
 leancop  -  no  -  wclock: 60.508s  -  trs.in
-colog 1.9  -  ok  -  wclock: 0.251s  -  anc
-colog 1.9  -  ok  -  wclock: 0.107s  -  and3
-colog 1.9  -  ok  -  wclock: 0.106s  -  and3or
+colog 1.9  -  ok  -  wclock: 0.115s  -  anc
+colog 1.9  -  ok  -  wclock: 0.112s  -  and3
+colog 1.9  -  ok  -  wclock: 0.108s  -  and3or
 colog 1.9  -  ok  -  wclock: 0.141s  -  anl
-colog 1.9  -  ok  -  wclock: 0.115s  -  ap
-colog 1.9  -  ok  -  wclock: 0.116s  -  apd
-colog 1.9  -  ok  -  wclock: 0.119s  -  ape
-colog 1.9  -  ok  -  wclock: 0.123s  -  cdp
-colog 1.9  -  ok  -  wclock: 0.127s  -  ce
-colog 1.9  -  ok  -  wclock: 0.119s  -  classic36
-colog 1.9  -  ok  -  wclock: 0.125s  -  classic43
-colog 1.9  -  ok  -  wclock: 0.350s  -  cro_8_2
-colog 1.9  -  no  -  wclock: 60.002s  -  cro_case1
-colog 1.9  -  no  -  wclock: 0.100s  -  cro_case2
-colog 1.9  -  ok  -  wclock: 0.098s  -  ct
-colog 1.9  -  ok  -  wclock: 0.101s  -  d_andrew
-colog 1.9  -  ok  -  wclock: 0.100s  -  d_horn
-colog 1.9  -  ok  -  wclock: 0.099s  -  delta
-colog 1.9  -  ok  -  wclock: 0.099s  -  delta1
-colog 1.9  -  ok  -  wclock: 0.103s  -  dpa
-colog 1.9  -  ok  -  wclock: 0.098s  -  dpe
-colog 1.9  -  ok  -  wclock: 0.101s  -  dpe_a
-colog 1.9  -  ok  -  wclock: 0.121s  -  dpt
-colog 1.9  -  ok  -  wclock: 0.096s  -  drinker
-colog 1.9  -  ok  -  wclock: 0.098s  -  drunk2
-colog 1.9  -  ok  -  wclock: 0.115s  -  equality
-colog 1.9  -  ok  -  wclock: 0.095s  -  exist
-colog 1.9  -  ok  -  wclock: 0.223s  -  five
-colog 1.9  -  ok  -  wclock: 0.097s  -  hdn001
-colog 1.9  -  ok  -  wclock: 0.111s  -  hdn002
+colog 1.9  -  ok  -  wclock: 0.113s  -  ap
+colog 1.9  -  ok  -  wclock: 0.109s  -  apd
+colog 1.9  -  ok  -  wclock: 0.110s  -  ape
+colog 1.9  -  ok  -  wclock: 0.108s  -  cdp
+colog 1.9  -  ok  -  wclock: 0.104s  -  ce
+colog 1.9  -  ok  -  wclock: 0.110s  -  classic36
+colog 1.9  -  ok  -  wclock: 0.106s  -  classic43
+colog 1.9  -  ok  -  wclock: 0.337s  -  cro_8_2
+colog 1.9  -  no  -  wclock: 60.001s  -  cro_case1
+colog 1.9  -  no  -  wclock: 0.106s  -  cro_case2
+colog 1.9  -  ok  -  wclock: 0.115s  -  ct
+colog 1.9  -  ok  -  wclock: 0.116s  -  d_andrew
+colog 1.9  -  ok  -  wclock: 0.119s  -  d_horn
+colog 1.9  -  ok  -  wclock: 0.112s  -  delta
+colog 1.9  -  ok  -  wclock: 0.105s  -  delta1
+colog 1.9  -  ok  -  wclock: 0.116s  -  dpa
+colog 1.9  -  ok  -  wclock: 0.113s  -  dpe
+colog 1.9  -  ok  -  wclock: 0.114s  -  dpe_a
+colog 1.9  -  ok  -  wclock: 0.136s  -  dpt
+colog 1.9  -  ok  -  wclock: 0.111s  -  drinker
+colog 1.9  -  ok  -  wclock: 0.115s  -  drunk2
+colog 1.9  -  ok  -  wclock: 0.127s  -  equality
+colog 1.9  -  ok  -  wclock: 0.105s  -  exist
+colog 1.9  -  ok  -  wclock: 0.231s  -  five
+colog 1.9  -  ok  -  wclock: 0.118s  -  hdn001
+colog 1.9  -  ok  -  wclock: 0.115s  -  hdn002
 colog 1.9  -  no  -  wclock: 60.001s  -  hdn010
-colog 1.9  -  ok  -  wclock: 0.203s  -  hdn020
-colog 1.9  -  ok  -  wclock: 4.237s  -  hp.bf.0
-colog 1.9  -  ok  -  wclock: 4.252s  -  hp.bf.1
-colog 1.9  -  ok  -  wclock: 4.471s  -  hp.bf.2
-colog 1.9  -  ok  -  wclock: 4.266s  -  hp.bf.3
-colog 1.9  -  ok  -  wclock: 0.107s  -  hr
-colog 1.9  -  ok  -  wclock: 1.106s  -  latt
-colog 1.9  -  ok  -  wclock: 0.148s  -  len
-colog 1.9  -  ok  -  wclock: 0.121s  -  mb
-colog 1.9  -  ok  -  wclock: 0.162s  -  nl
-colog 1.9  -  ok  -  wclock: 0.207s  -  nnl
-colog 1.9  -  ok  -  wclock: 0.106s  -  or
-colog 1.9  -  ok  -  wclock: 0.115s  -  or3
-colog 1.9  -  ok  -  wclock: 0.992s  -  p1p2
-colog 1.9  -  ok  -  wclock: 0.349s  -  p2p1
-colog 1.9  -  ok  -  wclock: 0.115s  -  pa
-colog 1.9  -  ok  -  wclock: 0.116s  -  pa1
+colog 1.9  -  ok  -  wclock: 0.192s  -  hdn020
+colog 1.9  -  ok  -  wclock: 3.668s  -  hp.bf.0
+colog 1.9  -  ok  -  wclock: 3.705s  -  hp.bf.1
+colog 1.9  -  ok  -  wclock: 3.926s  -  hp.bf.2
+colog 1.9  -  ok  -  wclock: 3.831s  -  hp.bf.3
+colog 1.9  -  ok  -  wclock: 0.097s  -  hr
+colog 1.9  -  ok  -  wclock: 0.956s  -  latt
+colog 1.9  -  ok  -  wclock: 0.129s  -  len
+colog 1.9  -  ok  -  wclock: 0.112s  -  mb
+colog 1.9  -  ok  -  wclock: 0.133s  -  nl
+colog 1.9  -  ok  -  wclock: 0.172s  -  nnl
+colog 1.9  -  ok  -  wclock: 0.109s  -  or
+colog 1.9  -  ok  -  wclock: 0.105s  -  or3
+colog 1.9  -  ok  -  wclock: 0.881s  -  p1p2
+colog 1.9  -  ok  -  wclock: 0.310s  -  p2p1
+colog 1.9  -  ok  -  wclock: 0.110s  -  pa
+colog 1.9  -  ok  -  wclock: 0.110s  -  pa1
 colog 1.9  -  no  -  wclock: 60.001s  -  pa2
-colog 1.9  -  ok  -  wclock: 0.115s  -  pierce
-colog 1.9  -  ok  -  wclock: 2.318s  -  pp
-colog 1.9  -  ok  -  wclock: 0.210s  -  problem43.40
-colog 1.9  -  ok  -  wclock: 0.285s  -  problem43.41
-colog 1.9  -  ok  -  wclock: 0.119s  -  qedf
-colog 1.9  -  ok  -  wclock: 0.289s  -  r
+colog 1.9  -  ok  -  wclock: 0.095s  -  pierce
+colog 1.9  -  ok  -  wclock: 1.920s  -  pp
+colog 1.9  -  ok  -  wclock: 0.137s  -  problem43.40
+colog 1.9  -  ok  -  wclock: 0.164s  -  problem43.41
+colog 1.9  -  ok  -  wclock: 0.112s  -  qedf
+colog 1.9  -  ok  -  wclock: 0.193s  -  r
 colog 1.9  -  no  -  wclock: 60.001s  -  sd
-colog 1.9  -  ok  -  wclock: 0.381s  -  ser
-colog 1.9  -  ok  -  wclock: 0.372s  -  srr
-colog 1.9  -  ok  -  wclock: 0.396s  -  steam
-colog 1.9  -  ok  -  wclock: 0.420s  -  strip
+colog 1.9  -  ok  -  wclock: 0.102s  -  ser
+colog 1.9  -  ok  -  wclock: 0.112s  -  srr
+colog 1.9  -  ok  -  wclock: 0.131s  -  steam
+colog 1.9  -  ok  -  wclock: 0.131s  -  strip
 colog 1.9  -  no  -  wclock: 60.001s  -  tdpe
 colog 1.9  -  no  -  wclock: 60.001s  -  tdpe2
 colog 1.9  -  no  -  wclock: 60.001s  -  tdpe3
 colog 1.9  -  no  -  wclock: 60.001s  -  tdpe4
-colog 1.9  -  ok  -  wclock: 0.422s  -  test
-colog 1.9  -  ok  -  wclock: 0.408s  -  trs
+colog 1.9  -  ok  -  wclock: 0.106s  -  test
+colog 1.9  -  ok  -  wclock: 0.110s  -  trs
 
-                    CL.pl               clp                 vampire             eprover             leancop             Geo                 colog               
-
-anc                 ok  -   0.055s      ok  -   0.005s                                                                                      ok  -   0.251s      
-anc.in                                                      ok  -   0.007s      ok  -   0.014s      ok  -   1.075s      ok  -   0.069s                          
-and3                ok  -   0.015s      ok  -   0.003s                                                                                      ok  -   0.107s      
-and3.in                                                     ok  -   0.008s      ok  -   0.013s      ok  -   1.034s      ok  -   0.005s                          
-and3or              ok  -   0.019s      ok  -   0.004s                                                                                      ok  -   0.106s      
-and3or.in                                                   ok  -   0.010s      ok  -   0.013s      ok  -   1.033s      ok  -   0.004s                          
-anl                 no  -  60.002s      ok  -   0.030s                                                                                      ok  -   0.141s      
-anl.in                                                      ok  -  12.247s      ok  -   0.519s      no  -  60.511s      ok  -   0.639s                          
-anl_eq              no  -  60.001s      ok  -   0.026s                                                                                                          
-ap                  ok  -   0.024s      ok  -   0.007s                                                                                      ok  -   0.115s      
-ap.in                                                       ok  -   0.011s      ok  -   0.008s      ok  -   3.052s      ok  -   0.022s                          
-apd                 ok  -   0.019s      ok  -   0.006s                                                                                      ok  -   0.116s      
-apd.in                                                      ok  -   0.011s      ok  -   0.010s      ok  -   1.029s      ok  -   0.005s                          
-ape                 ok  -   0.011s      ok  -   0.007s                                                                                      ok  -   0.119s      
-ape.in                                                      ok  -   0.011s      ok  -   0.010s      ok  -   1.030s      ok  -   0.011s                          
-cdp                 no  -  60.001s      ok  -   0.010s                                                                                      ok  -   0.123s      
-cdp.in                                                      ok  -   0.019s      ok  -   0.015s      no  -  60.508s      ok  -   0.109s                          
-ce                  ok  -   0.010s      ok  -   0.007s                                                                                      ok  -   0.127s      
-ce.in                                                       ok  -   0.007s      ok  -   0.012s      ok  -   1.033s      ok  -   0.025s                          
-classic36           ok  -   0.022s      ok  -   0.006s                                                                                      ok  -   0.119s      
-classic36.in                                                ok  -   0.009s      ok  -   0.013s      ok  -   1.033s      ok  -   0.013s                          
-classic43           ok  -   0.028s      ok  -   0.018s                                                                                      ok  -   0.125s      
-classic43.in                                                ok  -   0.016s      ok  -   0.016s      ok  -   1.033s      ok  -   0.006s                          
-cro_8_2             ok  -   0.251s      ok  -   0.948s                                                                                      ok  -   0.350s      
-cro_8_2.in                                                  ok  -  12.870s      no  -  60.021s      no  -  60.508s      no  -  60.001s                          
-cro_case1           no  -  60.002s      no  -  60.152s                                                                                      no  -  60.002s      
-cro_case1.in                                                no  -  60.001s      no  -  60.009s      no  -  60.508s      no  -  60.001s                          
-cro_case2           no  -  60.002s      no  -  60.131s                                                                                      no  -   0.100s      
-cro_case2.in                                                no  -  60.001s      no  -  60.011s      no  -  60.508s      no  -  60.001s                          
-ct                  no  -  60.002s      ok  -   0.031s                                                                                      ok  -   0.098s      
-ct.in                                                       ok  -   0.008s      ok  -   0.011s      ok  -  55.667s      ok  -   0.065s                          
-d_andrew            ok  -   0.020s      ok  -   0.018s                                                                                      ok  -   0.101s      
-d_andrew.in                                                 ok  -   0.005s      ok  -   0.011s      ok  -   1.029s      ok  -   0.011s                          
-d_horn              ok  -   0.020s      ok  -   0.027s                                                                                      ok  -   0.100s      
-d_horn.in                                                   ok  -   0.005s      ok  -   0.010s      ok  -   1.029s      ok  -   0.006s                          
-delta               ok  -   0.018s      ok  -   0.007s                                                                                      ok  -   0.099s      
-delta.in                                                    ok  -   0.005s      ok  -   0.012s      ok  -   1.031s      ok  -   0.010s                          
-delta1              ok  -   0.015s      ok  -   0.009s                                                                                      ok  -   0.099s      
-delta1.in                                                   ok  -   0.005s      ok  -   0.013s      ok  -   1.033s      ok  -   0.009s                          
-dpa                 ok  -   0.022s      ok  -   0.009s                                                                                      ok  -   0.103s      
-dpa.in                                                      ok  -   0.013s      ok  -   0.015s      no  -  60.508s      ok  -   0.038s                          
-dpe                 ok  -   0.020s      ok  -   0.007s                                                                                      ok  -   0.098s      
-dpe.in                                                      ok  -   0.015s      ok  -   0.016s      no  -  60.508s      ok  -   0.035s                          
-dpe_a               ok  -   0.018s      ok  -   0.007s                                                                                      ok  -   0.101s      
-dpe_a.in                                                    ok  -   0.014s      ok  -   0.015s      no  -  60.508s      ok  -   0.035s                          
-dpt                 no  -  60.001s      ok  -   0.017s                                                                                      ok  -   0.121s      
-dpt.in                                                      ok  -   0.073s      ok  -   0.366s      no  -  60.508s      ok  -   0.483s                          
-drinker             ok  -   0.022s      ok  -   0.004s                                                                                      ok  -   0.096s      
-drinker.in                                                  ok  -   0.009s      ok  -   0.007s      ok  -   1.031s      ok  -   0.007s                          
-drunk2              ok  -   0.017s      ok  -   0.007s                                                                                      ok  -   0.098s      
-drunk2.in                                                   ok  -   0.012s      ok  -   0.008s      ok  -   1.029s      ok  -   0.010s                          
-eq                  no  -  60.001s      ok  -   0.003s                                                                                                          
-equality            ok  -   0.027s      ok  -   0.011s                                                                                      ok  -   0.115s      
-equality.in                                                 ok  -   0.039s      ok  -   0.059s      ok  -   1.029s      ok  -   0.029s                          
-exist               ok  -   0.021s      ok  -   0.004s                                                                                      ok  -   0.095s      
-exist.in                                                    ok  -   0.008s      ok  -   0.006s      ok  -   1.030s      ok  -   0.005s                          
-five                ok  -   0.105s      ok  -   0.142s                                                                                      ok  -   0.223s      
-five.in                                                     no  -  60.001s      no  -  60.057s      no  -  60.508s      ok  -   0.283s                          
-hdn001              ok  -   0.022s      ok  -   0.012s                                                                                      ok  -   0.097s      
-hdn001.in                                                   ok  -   0.005s      ok  -   0.020s      ok  -   1.032s      ok  -   0.009s                          
-hdn002              ok  -   0.018s      ok  -   0.008s                                                                                      ok  -   0.111s      
-hdn002.in                                                   ok  -   0.005s      ok  -   0.015s      ok  -   1.035s      ok  -   0.017s                          
-hdn010              no  -  60.001s      no  -  43.258s                                                                                      no  -  60.001s      
-hdn010.in                                                   no  -  60.001s      no  -  60.002s      no  -  60.508s      no  -  60.001s                          
-hdn020              ok  -   0.032s      ok  -   0.051s                                                                                      ok  -   0.203s      
-hdn020.in                                                   ok  -   0.010s      ok  -   0.013s      ok  -   1.035s      ok  -   0.089s                          
-hp.bf.0             no  -  60.030s      ok  -   0.164s                                                                                      ok  -   4.237s      
-hp.bf.0.in                                                  ok  -   0.018s      ok  -   0.025s      no  -  60.508s      ok  -   0.007s                          
-hp.bf.1             no  -  60.031s      ok  -   0.103s                                                                                      ok  -   4.252s      
-hp.bf.1.in                                                  ok  -   0.027s      ok  -   0.030s      no  -  60.508s      ok  -   0.012s                          
-hp.bf.2             no  -  60.031s      ok  -   0.116s                                                                                      ok  -   4.471s      
-hp.bf.2.in                                                  ok  -   0.021s      ok  -   0.024s      no  -  60.508s      ok  -   0.012s                          
-hp.bf.3             no  -  60.031s      ok  -   0.118s                                                                                      ok  -   4.266s      
-hp.bf.3.in                                                  ok  -   0.025s      ok  -   0.017s      no  -  60.508s      ok  -   0.013s                          
-hr                  ok  -   0.021s      ok  -   0.003s                                                                                      ok  -   0.107s      
-hr.in                                                       ok  -   0.010s      ok  -   0.007s      ok  -   1.034s      ok  -   0.035s                          
-latt                ok  -   0.170s      ok  -   0.293s                                                                                      ok  -   1.106s      
-latt.in                                                     no  -  60.001s      no  -  60.049s      no  -  60.508s      no  -  60.001s                          
-len                 no  -  60.005s      no  -  13.505s      no  -  60.001s      no  -  60.012s      no  -  60.508s      ok  -   0.677s      ok  -   0.148s      
-mb                  ok  -   0.048s      ok  -   0.025s                                                                                      ok  -   0.121s      
-mb.in                                                       ok  -   0.007s      ok  -   0.018s      ok  -   1.034s      ok  -   0.069s                          
-nl                  ok  -   0.017s      ok  -   0.025s                                                                                      ok  -   0.162s      
-nl.in                                                       ok  -  12.238s      ok  -   0.221s      no  -  60.508s      ok  -   0.862s                          
-nnl                 ok  -   0.227s      ok  -   0.147s                                                                                      ok  -   0.207s      
-nnl.in                                                      ok  -  12.235s      ok  -   0.260s      no  -  60.508s      ok  -   0.343s                          
-or                  ok  -   0.019s      ok  -   0.009s                                                                                      ok  -   0.106s      
-or.in                                                       ok  -   0.005s      ok  -   0.007s      ok  -   1.026s      ok  -   0.005s                          
-or3                 ok  -   0.015s      ok  -   0.008s                                                                                      ok  -   0.115s      
-or3.in                                                      ok  -   0.009s      ok  -   0.006s      ok  -   1.029s      ok  -   0.005s                          
-p1p2                ok  -   0.916s      ok  -   1.050s                                                                                      ok  -   0.992s      
-p1p2.in                                                     no  -  60.001s      no  -  60.052s      no  -  60.508s      no  -  60.001s                          
-p1p2_eq             no  -  60.003s      no  -   0.337s                                                                                                          
-p2p1                ok  -   0.102s      ok  -   0.299s                                                                                      ok  -   0.349s      
-p2p1.in                                                     no  -  60.001s      no  -  60.052s      no  -  60.508s      no  -  60.001s                          
-p2p1_eq             no  -  60.003s      no  -   9.857s                                                                                                          
-pa                  no  -  60.003s      ok  -   0.031s                                                                                      ok  -   0.115s      
-pa.in                                                       no  -  60.001s      no  -  59.998s      no  -   1.031s      ok  -   0.006s                          
-pa1                 ok  -   0.027s      ok  -   0.017s                                                                                      ok  -   0.116s      
-pa1.in                                                      ok  -   0.005s      ok  -   0.008s      ok  -   1.031s      ok  -   0.010s                          
-pa2                 no  -  60.004s      no  -  14.193s                                                                                      no  -  60.001s      
-pa2.in                                                      no  -  60.001s      no  -  60.000s      no  -  60.508s      ok  -   0.010s                          
-pierce              ok  -   0.019s      ok  -   0.083s                                                                                      ok  -   0.115s      
-pierce.in                                                   ok  -   0.007s      ok  -   0.007s      ok  -   1.034s      ok  -   0.006s                          
-pp                  ok  -  40.035s      ok  -   0.983s                                                                                      ok  -   2.318s      
-pp.in                                                       no  -  60.001s      no  -  60.055s      no  -  60.508s      no  -  60.001s                          
-problem43.40        ok  -   0.083s      ok  -   0.009s                                                                                      ok  -   0.210s      
-problem43.40.in                                             ok  -   0.005s      ok  -   0.013s      ok  -   1.030s      ok  -   0.006s                          
-problem43.41        ok  -   0.266s      ok  -   0.020s                                                                                      ok  -   0.285s      
-problem43.41.in                                             ok  -   0.005s      ok  -   0.008s      ok  -   1.035s      ok  -   0.007s                          
-qedf                no  -  60.017s      ok  -   0.011s                                                                                      ok  -   0.119s      
-qedf.in                                                     ok  -   0.004s      ok  -   0.007s      ok  -   1.035s      ok  -   0.009s                          
-r                   ok  -   0.190s      ok  -   0.101s                                                                                      ok  -   0.289s      
-r.in                                                        ok  -   0.074s      ok  -   0.045s      no  -  60.508s      ok  -   3.631s                          
-sd                  no  -  60.003s      ok  -   0.674s      ok  -  45.266s      no  -  60.026s      no  -  60.508s      ok  -  43.254s      no  -  60.001s      
-ser                 ok  -   0.028s      ok  -   0.011s                                                                                      ok  -   0.381s      
-ser.in                                                      ok  -   0.011s      ok  -   0.008s      ok  -   9.128s      ok  -   0.009s                          
-srr                 ok  -   0.018s      ok  -   0.006s                                                                                      ok  -   0.372s      
-srr.in                                                      ok  -   0.012s      ok  -   0.010s      ok  -   1.032s      ok  -   0.013s                          
-steam               ok  -   0.019s      ok  -   0.015s                                                                                      ok  -   0.396s      
-steam.in                                                    ok  -   0.019s      ok  -   0.017s      ok  -   1.034s      ok  -   0.005s                          
-strip               no  -  60.003s      ok  -   0.010s                                                                                      ok  -   0.420s      
-strip.in                                                    ok  -   0.252s      ok  -   0.011s      no  -  60.508s      ok  -   0.097s                          
-tdpe                no  -  60.004s      no  -  28.098s                                                                                      no  -  60.001s      
-tdpe.in                                                     ok  -  24.966s      ok  -   0.489s      no  -  60.508s      ok  -   1.751s                          
-tdpe2               no  -  60.004s      no  -  60.129s                                                                                      no  -  60.001s      
-tdpe2.in                                                    ok  -  24.958s      ok  -   0.460s      no  -  60.508s      ok  -   1.738s                          
-tdpe3               ok  -  38.007s      no  -  60.035s                                                                                      no  -  60.001s      
-tdpe3.in                                                    ok  -  24.939s      ok  -   0.854s      no  -  60.508s      ok  -   3.278s                          
-tdpe4               ok  -   0.036s      no  -  60.041s                                                                                      no  -  60.001s      
-tdpe4.in                                                    ok  -  13.051s      ok  -   0.414s      no  -  60.508s      ok  -   1.002s                          
-test                ok  -   0.016s      ok  -   0.008s                                                                                      ok  -   0.422s      
-test.in                                                     ok  -   0.009s      ok  -   0.007s      ok  -   1.028s      ok  -   0.005s                          
-trs                 ok  -   0.023s      ok  -   0.016s                                                                                      ok  -   0.408s      
-trs.in                                                      ok  -   1.239s      ok  -   0.074s      no  -  60.508s      ok  -   1.292s                          
 
