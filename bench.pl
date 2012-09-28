@@ -263,6 +263,7 @@ sub runColog {
             fmtResult($prover, $status, $used, $_);
             $results{'colog'}{nameFromPath($_)} = [$status,$used];
         }
+	runCmd("killall java");
     }
 }
 
